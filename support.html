@@ -27,6 +27,10 @@
   .faq p { margin: 0; color: var(--muted); }
   hr { border: 0; border-top: 1px solid #F2B8C8; margin: 48px 0; }
   a { color: var(--cherry); }
+  .js section[lang] { display: none; }
+  .js section[lang].active { display: block; }
+  .js hr { display: none; }
+  nav a.active { background: var(--cherry); color: var(--cream); }
 </style>
 </head>
 <body>
@@ -71,5 +75,25 @@
       <p>Jeszcze nie. Historia jest zapisana na urządzeniu, na którym ją prowadzisz.</p></div>
   </section>
 </main>
+<script>
+  // One language at a time: #pl / #en in the link wins, otherwise the browser's language.
+  (function () {
+    document.documentElement.classList.add('js');
+    function show(lang) {
+      document.querySelectorAll('section[lang]').forEach(function (s) { s.classList.toggle('active', s.lang === lang); });
+      document.querySelectorAll('nav a').forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + lang); });
+      document.documentElement.lang = lang;
+    }
+    function fromHash() {
+      var h = location.hash.slice(1);
+      return h === 'pl' || h === 'en' ? h : null;
+    }
+    var start = fromHash() || ((navigator.language || '').toLowerCase().indexOf('pl') === 0 ? 'pl' : 'en');
+    show(start);
+    // The browser jumps to #pl / #en on load; keep the page at the top instead.
+    window.addEventListener('load', function () { window.scrollTo(0, 0); });
+    window.addEventListener('hashchange', function () { var l = fromHash(); if (l) { show(l); window.scrollTo(0, 0); } });
+  })();
+</script>
 </body>
 </html>
