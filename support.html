@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Butt Later · Support</title>
+<link rel="icon" href="peach.png">
+<style>
+  :root { --ink:#2B0F1E; --muted:#7A5465; --cream:#FFF7F2; --blush:#FBE3E8; --cherry:#D8235F; --paper:#FFFFFF; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink);
+    font: 17px/1.6 "Avenir Next", "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 32px 20px 64px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    background: var(--blush); border-radius: 28px; padding: 18px 22px; margin-bottom: 28px; }
+  header a { color: inherit; text-decoration: none; font: 34px/1 Didot, "Bodoni 72", Georgia, serif; }
+  header em { color: var(--cherry); }
+  header img { width: 96px; height: auto; }
+  nav { display: flex; gap: 10px; margin-bottom: 8px; }
+  nav a { background: var(--blush); color: var(--ink); text-decoration: none; font-weight: 600;
+    font-size: 14px; padding: 8px 14px; border-radius: 999px; }
+  h1 { font: 40px/1.1 Didot, "Bodoni 72", Georgia, serif; margin: 28px 0 12px; }
+  h2 { font-size: 17px; margin: 0 0 4px; }
+  .contact { background: var(--cherry); color: var(--cream); border-radius: 24px; padding: 18px 22px; }
+  .contact a { color: var(--cream); font-weight: 700; }
+  .faq { background: var(--paper); border-radius: 22px; padding: 16px 20px; margin-top: 12px; }
+  .faq p { margin: 0; color: var(--muted); }
+  hr { border: 0; border-top: 1px solid #F2B8C8; margin: 48px 0; }
+  a { color: var(--cherry); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <a href="./">Butt <em>later.</em></a>
+    <img src="peach.png" alt="">
+  </header>
+  <nav><a href="#en">English</a><a href="#pl">Polski</a></nav>
+
+  <section id="en" lang="en">
+    <h1>Support</h1>
+    <div class="contact">Questions, bugs or ideas?
+      <a href="https://github.com/MarcelinaKochman/butt-later-site/issues">Open an issue on GitHub</a>.</div>
+
+    <div class="faq"><h2>I don’t get reminders.</h2>
+      <p>Check that notifications for Butt Later are allowed in your phone’s settings, that reminders are on
+        in the app’s Settings, and that they aren’t paused for today. Reminders arrive only within the hours you chose.</p></div>
+    <div class="faq"><h2>How do I change the language?</h2>
+      <p>Settings → Language → English or Polski → Save settings.</p></div>
+    <div class="faq"><h2>Where is my data?</h2>
+      <p>Only on your phone. The app has no account and sends nothing anywhere. See the <a href="privacy.html">privacy policy</a>.</p></div>
+    <div class="faq"><h2>Can I move my history to a new phone?</h2>
+      <p>Not yet. History lives on the device it was logged on.</p></div>
+  </section>
+
+  <hr>
+
+  <section id="pl" lang="pl">
+    <h1>Wsparcie</h1>
+    <div class="contact">Pytania, błędy albo pomysły?
+      <a href="https://github.com/MarcelinaKochman/butt-later-site/issues">Zgłoś je na GitHubie</a>.</div>
+
+    <div class="faq"><h2>Nie dostaję przypomnień.</h2>
+      <p>Sprawdź, czy w ustawieniach telefonu powiadomienia dla Butt Later są dozwolone, czy przypomnienia są włączone
+        w Ustawieniach aplikacji i czy nie są wstrzymane na dziś. Przypomnienia przychodzą tylko w wybranych godzinach.</p></div>
+    <div class="faq"><h2>Jak zmienić język?</h2>
+      <p>Ustawienia → Język → English albo Polski → Zapisz ustawienia.</p></div>
+    <div class="faq"><h2>Gdzie są moje dane?</h2>
+      <p>Tylko na Twoim telefonie. Aplikacja nie ma konta i niczego nigdzie nie wysyła. Zobacz <a href="privacy.html#pl">politykę prywatności</a>.</p></div>
+    <div class="faq"><h2>Czy mogę przenieść historię na nowy telefon?</h2>
+      <p>Jeszcze nie. Historia jest zapisana na urządzeniu, na którym ją prowadzisz.</p></div>
+  </section>
+</main>
+</body>
+</html>
